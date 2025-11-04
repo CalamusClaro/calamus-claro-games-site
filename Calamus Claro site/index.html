@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Твоя игра — Официальный сайт</title>
+  <meta name="description" content="Официальный сайт инди‑игры. Скачать, играть в браузере, узнать новости и системные требования." />
+  <style>
+    :root {
+      --bg: #0b0f14; --card: #0f1621; --text: #e8f0ff; --muted:#a9b4c7;
+      --brand:#6aa0ff; --brand-2:#88e0d3; --ok:#61d095; --warn:#ffd166;
+      --radius: 16px;
+    }
+    * { box-sizing: border-box; }
+    html,body { margin:0; padding:0; background:var(--bg); color:var(--text); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "SF Pro", Arial, "Noto Sans", sans-serif; line-height:1.5; }
+    a { color: var(--brand); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 24px; }
+    header { display:flex; align-items:center; justify-content:space-between; gap:16px; padding: 12px 0 8px; position: sticky; top:0; backdrop-filter: blur(6px); background: rgba(11,15,20,0.6); border-bottom: 1px solid rgba(255,255,255,0.06); z-index:50; }
+    .logo { display:flex; align-items:center; gap:12px; font-weight:700; letter-spacing:.3px; }
+    .logo-badge { width:34px; height:34px; display:grid; place-items:center; border-radius:10px; background: linear-gradient(135deg, var(--brand), var(--brand-2)); color:#0b0f14; font-weight:900; }
+    nav { display:flex; gap:14px; flex-wrap:wrap; }
+    nav a { padding: 8px 12px; border-radius: 10px; background: rgba(255,255,255,0.04); }
+    .hero { display:grid; grid-template-columns: 1.1fr .9fr; gap:24px; padding: 42px 0 16px; }
+    .hero h1 { font-size: clamp(28px, 4.2vw, 56px); line-height:1.05; margin:0 0 12px; }
+    .hero p { color: var(--muted); margin: 0 0 18px; }
+    .btns { display:flex; flex-wrap:wrap; gap:12px; margin-top: 6px; }
+    .btn { display:inline-flex; align-items:center; gap:10px; padding:12px 16px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03)); color:var(--text); font-weight:600; }
+    .btn.primary { background: linear-gradient(135deg, var(--brand), var(--brand-2)); color:#0b0f14; border:none; }
+    .card { background: var(--card); border:1px solid rgba(255,255,255,0.06); border-radius: var(--radius); padding:16px; }
+    .grid { display:grid; gap:16px; }
+    .grid.cols-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    .grid.cols-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
+    .tag { display:inline-flex; gap:8px; align-items:center; padding:6px 10px; border-radius:999px; background: rgba(255,255,255,0.06); color:var(--muted); font-size:12px; }
+    .section-title { font-size: 22px; margin: 20px 0 10px; }
+    .media { aspect-ratio: 16/9; width:100%; border-radius: 14px; overflow:hidden; border:1px solid rgba(255,255,255,0.06); background: #070a0f; display:grid; place-items:center; color:var(--muted); }
+    .kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size:12px; padding:.2em .45em; border-radius:6px; border:1px solid rgba(255,255,255,.2); background: rgba(255,255,255,.06); }
+    .table { width:100%; border-collapse: collapse; font-size: 14px; }
+    .table th, .table td { padding: 10px 12px; border-bottom:1px dashed rgba(255,255,255,0.08); text-align:left; color: #d7e2f5; }
+    .table th { color:#9fb2d0; font-weight:600; }
+    footer { margin: 32px 0 12px; color: var(--muted); font-size: 13px; display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+    .pill { border:1px dashed rgba(255,255,255,0.14); border-radius:12px; padding:10px 12px; }
+    .note { font-size: 13px; color: var(--muted); }
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
+      nav { display:none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <div class="logo"><div class="logo-badge">CC</div> <div>Игра • Официальный сайт</div></div>
+    <nav>
+      <a href="#download">Скачать</a>
+      <a href="#web">Играть в браузере</a>
+      <a href="#news">Новости</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div>
+        <span class="tag">Инди • Single‑player • Windows (UE5) • Fan‑Made</span>
+        <h1>Warfare Whimper (Fan‑Made)</h1>
+        <p>Короткий питч на 1–2 предложения. Опиши сеттинг, крючок и уникальную механику. Например: «Лабиринт сознания с меняющимися правилами — твои страхи становятся уровнями».</p>
+        <div class="btns">
+          <a class="btn primary" href="#download">⬇ Скачать для Windows</a>
+          <a class="btn" href="#web">▶ Играть в браузере</a>
+          <a class="btn" href="#buy">💳 Поддержать разработку</a>
+        </div>
+        <p class="note">Поддерживаются офлайн‑запуск и автономные обновления через патчи.</p>
+      </div>
+      <div class="card">
+        <div class="media">
+          <!-- Заменить ссылку на YouTube или встроенное видео трейлера -->
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Trailer" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div style="display:flex; gap:10px; margin-top:10px; flex-wrap:wrap">
+          <span class="tag">Версия: <strong>0.1.0 Fan Demo</strong></span>
+          <span class="tag">Обновлено: <time>2025‑11‑04</time></span>
+          <span class="tag">Размер билда: ~<strong>1.2–2.5 ГБ</strong></span>
+        </div>
+      </div>
+    </section>
+
+    <section id="web">
+      <h2 class="section-title">Играть в браузере (WebGL/WebGPU)</h2>
+      <div class="card">
+        <div class="media" id="webgl">
+          <div>
+            <p><strong>Здесь будет Web‑сборка</strong> (Unity WebGL / Godot / UE5 Pixel Streaming / WASM‑порт).</p>
+            <p class="note">Для UE5 можно использовать Pixel Streaming (через свой сервер или облако). Для Unity/Godot — обычная WebGL сборка.</p>
+          </div>
+        </div>
+        <p class="note" style="margin-top:10px">Подсказка: положи содержимое веб‑сборки в <code>/web-build/</code> и замени этот блок на iframe или скрипт загрузчика движка.</p>
+      </div>
+    </section>
+
+    <section id="download">
+      <h2 class="section-title">Скачать</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <h3>Windows (x64)</h3>
+          <p>Архив с автономным запуском. Распакуй, запусти <span class="kbd">WarfareWhimper.exe</span>.</p>
+          <div class="btns">
+            <a class="btn primary" href="downloads/WW_win_x64_FanDemo_v0.1.0.zip">⬇ Скачать .zip</a>
+            <a class="btn" href="checksums/WW_FanDemo_v0.1.0_sha256.txt">✔ Контрольные суммы</a>
+          </div>
+          <p class="note">Совет: подпиши exe самоподписанным сертификатом, чтобы меньше ругался SmartScreen.</p>
+        </div>
+        <div class="card">
+          <h3>Windows (инсталлятор)</h3>
+          <p>Авто‑установщик с ярлыками в меню Пуск. Запусти <span class="kbd">Setup_WW_FanDemo_v0.1.0.exe</span>.</p>
+          <div class="btns">
+            <a class="btn primary" href="downloads/Setup_WW_FanDemo_v0.1.0.exe">⬇ Скачать .exe</a>
+            <a class="btn" href="checksums/WW_FanDemo_v0.1.0_sha256.txt">✔ Контрольные суммы</a>
+          </div>
+          <p class="note">Подписать инсталлятор сертификатом — желательно, чтобы не ругался SmartScreen.</p>
+          <p class="note">Проверено в Proton/Wine — укажи свой статус.</p>
+        </div>
+      </div>
+      <div class="pill" style="margin-top:12px">
+        <strong>Зеркала:</strong> добавь ссылки на CDN/облако (например, R2/Backblaze/Google Drive — по возможности).
+      </div>
+    </section>
+
+    <section id="news">
+      <h2 class="section-title">Новости и патчноуты</h2>
+      <div class="grid cols-3">
+        <article class="card">
+          <h3>0.1.0 α — Fan Demo (WW)</h3>
+          <p class="note">04.11.2025</p>
+          <ul>
+            <li>2 коридорные зоны + прототип врага «Кантузённый»</li>
+            <li>Настройки графики и чувствительности мыши</li>
+            <li>Сохранения в <span class="kbd">%AppData%/WarfareWhimper/</span></li>
+          </ul>
+        <article class="card">
+          <h3>Roadmap (кратко)</h3>
+          <ul>
+            <li>0.2 — Босс «Майор» + редактор карт</li>
+            <li>0.3 — Перезапускаемый рогалик‑режим</li>
+            <li>1.0 — Полная кампания</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Подписка на новости</h3>
+          <p class="note">Оставь почту — пришлём релизы и ключи для тестов.</p>
+          <form action="https://formspree.io/f/your-id" method="POST">
+            <input type="email" name="email" placeholder="you@example.com" required style="padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,.2);background:#0c121a;color:#e8f0ff;width:100%;margin-bottom:8px" />
+            <button class="btn primary" type="submit">Подписаться</button>
+          </form>
+          <p class="note">Либо пиши на почту: <a href="mailto:contact@example.com">contact@example.com</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="faq">
+      <h2 class="section-title">FAQ</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <h3>Это фан‑проект. Можно ли его продавать?</h3>
+          <p>Как фан‑мейд, проект не использует коммерциализацию оригинального IP. Сборы возможны только как добровольная поддержка автора за <em>собственный код/контент</em>, без продажи материалов правообладателя. Если у IP‑владельца иные правила — мы соблюдаем их.</p>
+        <div class="card">
+          <h3>Как обновлять игру?</h3>
+          <p>Мы публикуем патчи (меньше объём) и полный билд. Для патчей — распакуй в папку игры, соглашаясь на замену. (Можно позже добавить автопатчер/лаунчер.)</p>
+        </div>
+        <div class="card">
+          <h3>Будет ли DRM?</h3>
+          <p>По умолчанию — мягкий DRM: ключ активации + офлайн‑валидация при первом запуске. Игра полностью доступна офлайн.</p>
+        </div>
+        <div class="card">
+          <h3>Системные требования</h3>
+          <table class="table">
+            <tr><th>Минимальные</th><th>Рекомендованные</th></tr>
+            <tr>
+              <td>CPU: 4‑ядра • RAM: 8 ГБ • GPU: GTX 1050 / RX 560 • Диск: 6 ГБ</td>
+              <td>CPU: 6‑ядер • RAM: 16 ГБ • GPU: GTX 1660 / RX 590 • Диск: 8 ГБ</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="buy">
+      <h2 class="section-title">Поддержать разработку / Купить</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <h3>Вариант A — Международная оплата</h3>
+          <p>Подключи провайдера (например, Stripe/PayPal/UnitPay и т.п., если доступно в твоём регионе/юр.лице). Кнопка ведёт на хостед‑кассу:</p>
+          <a class="btn primary" href="#">💳 Купить — 9.99</a>
+          <p class="note">После оплаты отправляется ключ на email.</p>
+        </div>
+        <div class="card">
+          <h3>Вариант B — Локальные способы</h3>
+          <p>Добавь ссылки на агрегаторы, которые доступны твоей аудитории (локальные платёжные шлюзы/квази‑эквайринг/донат‑платформы). Можно включить крипто‑донат как опциональный канал.</p>
+          <a class="btn" href="#">💠 Альтернативные способы</a>
+        </div>
+      </div>
+      <p class="note" style="margin-top:8px">Важно: провайдеры оплаты зависят от твоей юр. ситуации и страны. Проверь актуальные правила и санкционные ограничения.</p>
+    </section>
+
+    <section>
+      <h2 class="section-title">Политики</h2>
+      <div class="grid cols-3">
+        <div class="card"><h3>Fan EULA</h3><p>Лицензионное соглашение пользователя (фан‑версия, не связана с правообладателем оригинала). Добавь файл <span class="kbd">/legal/eula.html</span>.</p></div>
+        <div class="card"><h3>Privacy & Cookies</h3><p>Политика конфиденциальности. Добавь <span class="kbd">/legal/privacy.html</span>.</p></div>
+        <div class="card"><h3>Press Kit (WW)</h3><p>Скриншоты, логотипы, факты об игре. Папка <span class="kbd">/press</span>.</p></div>
+      </div>
+    </section>
+
+    <footer class="wrap">
+      <div>© <span id="year"></span> Твоя студия • <a href="#">Связаться</a> • v0.1.0</div>
+      <div>Сделано с любовью к инди 💙</div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
