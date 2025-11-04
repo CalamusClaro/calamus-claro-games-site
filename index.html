@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Warfare Whimper — Официальный сайт</title>
+    <meta name="description" content="Официальный сайт фанатской инди-игры Warfare Whimper. Скачать, узнать новости, системные требования и поддержать разработку." />
+    <style>
+        :root {
+            --bg: #0b0f14;
+            --card: #0f1621;
+            --text: #e8f0ff;
+            --muted: #a9b4c7;
+            --brand: #6aa0ff;
+            --brand-2: #88e0d3;
+            --ok: #61d095;
+            --warn: #ffd166;
+            --radius: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Inter,"SF Pro",Arial,"Noto Sans",sans-serif;
+            line-height: 1.5;
+        }
+
+        a {
+            color: var(--brand);
+            text-decoration: none;
+        }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+        .wrap {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 12px 0 8px;
+            position: sticky;
+            top: 0;
+            backdrop-filter: blur(6px);
+            background: rgba(11,15,20,0.6);
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+            z-index: 50;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 700;
+            letter-spacing: .3px;
+        }
+
+        .logo-badge {
+            width: 34px;
+            height: 34px;
+            display: grid;
+            place-items: center;
+            border-radius: 10px;
+            background: linear-gradient(135deg,var(--brand),var(--brand-2));
+            color: #0b0f14;
+            font-weight: 900;
+        }
+
+        nav {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+            nav a {
+                padding: 8px 12px;
+                border-radius: 10px;
+                background: rgba(255,255,255,0.04);
+            }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            gap: 24px;
+            padding: 42px 0 16px;
+        }
+
+            .hero h1 {
+                font-size: clamp(28px,4.2vw,56px);
+                line-height: 1.05;
+                margin: 0 0 12px;
+            }
+
+            .hero p {
+                color: var(--muted);
+                margin: 0 0 18px;
+            }
+
+        .btns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 6px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 16px;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.1);
+            background: linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.03));
+            color: var(--text);
+            font-weight: 600;
+        }
+
+            .btn.primary {
+                background: linear-gradient(135deg,var(--brand),var(--brand-2));
+                color: #0b0f14;
+                border: none;
+            }
+
+        .card {
+            background: var(--card);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: var(--radius);
+            padding: 16px;
+        }
+
+        .grid {
+            display: grid;
+            gap: 16px;
+        }
+
+            .grid.cols-2 {
+                grid-template-columns: repeat(2,minmax(0,1fr));
+            }
+
+            .grid.cols-3 {
+                grid-template-columns: repeat(3,minmax(0,1fr));
+            }
+
+        .tag {
+            display: inline-flex;
+            gap: 8px;
+            align-items: center;
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.06);
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        .section-title {
+            font-size: 22px;
+            margin: 20px 0 10px;
+        }
+
+        .media {
+            aspect-ratio: 16/9;
+            width: 100%;
+            border-radius: 14px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.06);
+            background: #070a0f;
+            display: grid;
+            place-items: center;
+            color: var(--muted);
+        }
+
+        .kbd {
+            font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+            font-size: 12px;
+            padding: .2em .45em;
+            border-radius: 6px;
+            border: 1px solid rgba(255,255,255,.2);
+            background: rgba(255,255,255,.06);
+        }
+
+        footer {
+            margin: 32px 0 12px;
+            color: var(--muted);
+            font-size: 13px;
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .note {
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        @media(max-width:900px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="wrap">
+        <div class="logo"><div class="logo-badge">WW</div> <div>Официальный сайт игры</div></div>
+        <nav>
+            <a href="#download">Скачать</a>
+            <a href="#web">Браузерная версия</a>
+            <a href="#news">Новости</a>
+            <a href="#faq">FAQ</a>
+        </nav>
+    </header>
+
+    <main class="wrap">
+        <section class="hero">
+            <div>
+                <span class="tag">Indie • Fan-Made • UE5 • Windows</span>
+                <h1>Warfare Whimper</h1>
+                <p>Фанатский демо-проект во вселенной Dark Deception. Исследуй мрачные коридоры, избегай «кантузённых», почувствуй атмосферу холодной войны и экспериментов над сознанием.</p>
+                <div class="btns">
+                    <a class="btn primary" href="#download">⬇ Скачать демо</a>
+                    <a class="btn" href="#web">▶ Играть в браузере</a>
+                    <a class="btn" href="#buy">💳 Поддержать</a>
+                </div>
+                <p class="note">Демо-версия доступна только для Windows (x64). Установка офлайн, без лаунчеров.</p>
+            </div>
+            <div class="card">
+                <div class="media">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Trailer" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div style="display:flex;gap:10px;margin-top:10px;flex-wrap:wrap">
+                    <span class="tag"><strong>Версия:</strong> 0.1.0 Fan Demo</span>
+                    <span class="tag"><strong>Дата:</strong> 2025-11-04</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==== DOWNLOAD SECTION ==== -->
+        <section id="download">
+            <h2 class="section-title">Скачать</h2>
+            <div class="grid cols-2">
+
+                <!-- ✅ Инсталлятор (.exe) — единственный вариант -->
+                <div class="card">
+                    <h3>Windows (x64) — Инсталлятор</h3>
+                    <p>Рекомендуемый способ. Установщик создаст ярлыки в меню «Пуск». Запусти файл <span class="kbd">Setup_WarfareWhimper_Demo.exe</span>.</p>
+                    <div class="btns">
+                        <a class="btn primary" href="https://github.com/CalamusClaro/calamus-claro-games-site/releases/download/v0.1.0/Setup_WarfareWhimper_Demo.exe">
+                            ⬇ Скачать .exe
+                        </a>
+                    </div>
+                    <p class="note">Если Windows SmartScreen выдаёт предупреждение — нажми «Подробнее», затем «Всё равно выполнить». Это из-за отсутствия цифровой подписи, а не вирус.</p>
+                </div>
+
+                <!-- ❌ ZIP удалён — по твоему запросу -->
+            </div>
+
+            <div class="pill" style="margin-top:12px">
+                <strong>Зеркала (позже):</strong> можно добавить Google Drive, Cloudflare R2, Яндекс.Диск, Mega или itch.io.
+            </div>
+        </section>
+
+        <!-- ==== NEWS ==== -->
+        <section id="news">
+            <h2 class="section-title">Новости</h2>
+            <div class="grid cols-3">
+                <article class="card">
+                    <h3>0.1.0 — Fan Demo (Rel.)</h3>
+                    <p class="note">04.11.2025</p>
+                    <ul>
+                        <li>Первая публичная демо-версия</li>
+                        <li>2 уровня, прототип врагов «кантузённых»</li>
+                        <li>Сохранения в <span class="kbd">%AppData%/WarfareWhimper/</span></li>
+                    </ul>
+                </article>
+                <article class="card">
+                    <h3>Roadmap</h3>
+                    <ul>
+                        <li>0.2 — Новый уровень + босс</li>
+                        <li>0.3 — Рогалик-режим</li>
+                        <li>1.0 — Полная кампания</li>
+                    </ul>
+                </article>
+                <article class="card">
+                    <h3>Подписка</h3>
+                    <p class="note">Укажи email — получай билды и ключи для тестов.</p>
+                    <form action="#" method="POST">
+                        <input type="email" name="email" placeholder="you@example.com" required style="width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,.2);background:#0c121a;color:#e8f0ff;margin-bottom:8px">
+                        <button class="btn primary" type="submit">Подписаться</button>
+                    </form>
+                </article>
+            </div>
+        </section>
+
+        <!-- ==== FAQ ==== -->
+        <section id="faq">
+            <h2 class="section-title">FAQ</h2>
+            <div class="grid cols-2">
+                <div class="card">
+                    <h3>Это фанатская игра. Можно ли её распространять?</h3>
+                    <p>Да, бесплатно или по модели «донат». Продавать оригинальные ресурсы IP (Dark Deception) нельзя.</p>
+                </div>
+                <div class="card">
+                    <h3>Как обновлять игру?</h3>
+                    <p>Новые версии выходят через патчи или полные билды. Планируется лаунчер или автопатчер.</p>
+                </div>
+                <div class="card">
+                    <h3>Требования к ПК</h3>
+                    <table class="table">
+                        <tr><th>Минимальные</th><th>Рекомендуемые</th></tr>
+                        <tr>
+                            <td>CPU: 4 ядра • RAM: 8 ГБ • GPU: GTX 1050</td>
+                            <td>CPU: 6 ядер • RAM: 16 ГБ • GPU: GTX 1660</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==== SUPPORT / BUY ==== -->
+        <section id="buy">
+            <h2 class="section-title">Поддержать разработку</h2>
+            <div class="grid cols-2">
+                <div class="card">
+                    <h3>Международно</h3>
+                    <p>Stripe / PayPal / Boosty (в разработке).</p>
+                    <a class="btn primary" href="#">💳 Поддержать</a>
+                </div>
+                <div class="card">
+                    <h3>Локально (Россия / СНГ)</h3>
+                    <p>ЮMoney, Qiwi (добавляется позже).</p>
+                    <a class="btn" href="#">💠 Донат</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==== FOOTER ==== -->
+    <footer class="wrap">
+        <div>© <span id="year"></span> Calamus Claro • Warfare Whimper</div>
+        <div>Fan Project • UE5 • Indie</div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
+
